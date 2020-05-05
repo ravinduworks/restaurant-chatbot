@@ -29,7 +29,7 @@ HEADERS = (
 SMTP_CONFIG = {
     'username': 'smtp-user-name',
     'password': 'smtp-user-password',
-    'host': 'email-smtp.ap-south-1.amazonaws.com',
+    'host': 'smtp-hostname',
     'port': 587,
 }
 
@@ -47,7 +47,7 @@ def send_email(email_addr, html):
 
     :return: None
     """
-    sender = 'rboodher@gmail.com'
+    sender = 'chatbot-sender-email@domainname.com'
     recipients = email_addr
 
     msg = MIMEMultipart()

@@ -16,7 +16,7 @@ efficiently and to provide a good restaurant discovery experience.
     - More than 700
 - In the chat window, it displays top 5 restaurants found in a location
   asked by users. In sorted order on a scale of 1-5, 5 being the highest.
-- Over email it sends top 10 restaurants.
+- It sends top 10 restaurants over email.
 
 
 ## Technical
