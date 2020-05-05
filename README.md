@@ -6,7 +6,7 @@ FOODIE(Assumption).
 The main purpose of the bot is to help users discover restaurants quickly and
 efficiently and to provide a good restaurant discovery experience.
 
-# Notes:
+## Notes:
 - Foodie works only in Tier 1 and Tier 2 cities in india.
 - It provides only following cuisine preferences - Chinese, American, Italian,
   South Indian and North Indian.
@@ -23,16 +23,16 @@ efficiently and to provide a good restaurant discovery experience.
 ### Operating System:
 This project is built on Mac OSX development environment, if you are using
 mac osx for testing, it should work directly. If in case did not work, please
-retrain the module by running - rasa train.
+retrain the module by running command - rasa train.
 
-For Windows, make sure requirement.txt matches and train the module - rasa train.
+For Windows, make sure requirement.txt matches and train the module.
 
 ## What’s inside this Restaurant Chat Bot Project?
 
 This project contains training data and the main files needed to build/run
 an restaurant bot on your machine.
 
-The `restaurantbot` consists of the following files:
+The `restaurant-chatbot` consists of the following files:
 
 - **custom** Contains all the logic required to achieve as per the problem statement.
     - fetch_restaurant.py: It has logic on fetching restaurants details from
@@ -67,7 +67,7 @@ The `restaurantbot` consists of the following files:
 Make sure to install all required packages mentioned in requirement.txt
 
 Refer the below path to setup Rasa:
-[Setup]().
+[Setup](https://github.com/raviboodher/Restaurant-Chatbot/blob/master/installation-notes.txt).
 
 To train your restaurant bot, execute
 ```
