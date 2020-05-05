@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .counts {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        .counts td, .counts th {
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+        .counts tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .counts tr:hover {
+            background-color: #ddd;
+        }
+
+        .counts th {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            background-color: #A9A9A9;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h4> FOODIE Restaurant Recommendations: <br></h4>
+<table class="counts">
+    <tr>
+        {% for header in headers -%}
+            <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+
+    {% for restaurant in foodie_list -%}
+        <tr>
+            <td> {{ restaurant[1]['name'] }}</td>
+            <td> {{ restaurant[1]['address'] }}</td>
+            <td> {{ restaurant[1]['average_budget_for_two'] }}</td>
+            <td> {{ restaurant[1]['rating'] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<p>Sincerely,<br />
+-- Your friendly Foodie Bot.
+</p>
+
+</body>
+</html>

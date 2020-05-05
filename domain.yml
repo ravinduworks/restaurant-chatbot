@@ -1,0 +1,101 @@
+actions:
+- action_check_location
+- action_search_restaurants
+- action_send_email
+- utter_ask_again
+- utter_ask_budget
+- utter_ask_cuisine
+- utter_ask_email
+- utter_ask_email_id
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_email_not_required
+- utter_goodbye
+- utter_greet
+entities:
+- cuisine
+- email
+- email_not_required
+- location
+- price
+- unknown
+intents:
+- restaurant_search
+- email_not_required
+- greet
+- affirm
+- unknown
+- send_email
+- stop
+- goodbye
+responses:
+  utter_ask_again:
+  - text: Sorry, didn’t find any such location. Can you please tell again?
+  utter_ask_budget:
+  - buttons:
+    - payload: lesser than 300
+      title: lesser than 300
+    - payload: between 300 to 700
+      title: between 300 to 700
+    - payload: more than 700
+      title: more than 700
+    text: What price range are you looking for?
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Italian
+      title: Italian
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    - payload: Maxican
+      title: Maxican
+    - payload: American
+      title: American
+    text: what kind of cuisine would you like?
+  utter_ask_email:
+  - text: Would you like to have top 10 restaurants in your email?
+  - text: Shall I send you details of top 10 restaurants over email?
+  utter_ask_email_id:
+  - text: please type in your email address
+  - text: Please provide your email address
+  - text: pleast enter your email address
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  - text: Please enter location
+  - text: Okay, In which city would you like to find resturant?
+  utter_default:
+  - text: I cannot understand, please try again.
+  utter_email_not_required:
+  - text: no worries
+  - text: Okay. Bon Appetit!
+  - text: Cool, no problem
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there! How may i help you?
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you today?
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 0
+slots:
+  cuisine:
+    type: text
+  email:
+    type: text
+  location:
+    type: text
+  price:
+    type: categorical
+    values:
+    - lesser than 300
+    - between 300 to 700
+    - more than 700
+    - __other__
