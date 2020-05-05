@@ -1,4 +1,4 @@
-# Restaurant Bot
+# Restaurant Chat Bot
 
 Purpose of this project is to build a conversation chatbot for a food startup
 FOODIE(Assumption).
@@ -34,7 +34,7 @@ an restaurant bot on your machine.
 
 The `restaurant-chatbot` consists of the following files:
 
-- **custom** Contains all the logic required to achieve as per the problem statement.
+- **custom** Contains all the logic required to achieve as per the requirements.
     - fetch_restaurant.py: It has logic on fetching restaurants details from
       zomato API based of location, cuisine, rating and minimum and maximum amount
       provided by users. And returns top restaurants in a sorted order (descending)
