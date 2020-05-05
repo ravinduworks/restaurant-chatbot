@@ -1,29 +1,29 @@
 # Restaurant Chat Bot
 
-Purpose of this project is to build a conversation chatbot for a food startup
+Purpose of this project is to build a conversational chatbot for a food startup
 FOODIE(Assumption).
 
 The main purpose of the bot is to help users discover restaurants quickly and
 efficiently and to provide a good restaurant discovery experience.
 
 ## Notes:
-- Foodie works only in Tier 1 and Tier 2 cities in india.
+- Foodie works only in Tier 1 and Tier 2 cities in India.
 - It provides only following cuisine preferences - Chinese, American, Italian,
   South Indian and North Indian.
 - It offers budget in 3 categories:
     - Lesser than Rs. 300
     - Rs. 300 to 700
     - More than 700
-- In the chat window, it displays top 5 restaurants list found in a location
+- In the chat window, it displays top 5 restaurants found in a location
   asked by users. In sorted order on a scale of 1-5, 5 being the highest.
-- Over email it sends top 10 restaurants found in a location.
+- Over email it sends top 10 restaurants.
 
 
 ## Technical
 ### Operating System:
 This project is built on Mac OSX development environment, if you are using
-mac osx for testing, it should work directly. If in case did not work, please
-retrain the module by running command - rasa train.
+Mac OSX for testing, it should work directly. If in case did not work, please
+retrain the module by running the command - rasa train.
 
 For Windows, make sure requirement.txt matches and train the module.
 
@@ -34,14 +34,14 @@ an restaurant bot on your machine.
 
 The `restaurant-chatbot` consists of the following files:
 
-- **custom** Contains all the logic required to achieve as per the requirements.
+- **custom** Contains all the logic required to achieve as per the specification.
     - fetch_restaurant.py: It has logic on fetching restaurants details from
-      zomato API based of location, cuisine, rating and minimum and maximum amount
-      provided by users. And returns top restaurants in a sorted order (descending)
-      of the average Zomato user rating (on a scale of 1-5, 5 being the highest)
+      Zomato API based of location, cuisine, rating and minimum and maximum amount
+      provided by users and returns top restaurants in a sorted order (descending)
+      on an average Zomato user rating (on a scale of 1-5, 5 being the highest)
 
-    - verify_location.py: It verifies if the location entered by user is part of
-      Tier 1 and Tier 2 cities and if it is being served by Zomato.
+    - verify_location.py: It verifies if the location entered by the user is part
+      of Tier 1 and Tier 2 cities and if it is being served by Zomato.
 
     - send_email.py: It manages generating html data and sending top 10 restaurants
       details to user if requested.
@@ -49,9 +49,9 @@ The `restaurant-chatbot` consists of the following files:
     - email_template.j2 - Jinja2 template for generating html data, rendered by
       email function in send_email code.
 
-    - locations.txt: Contains all Tier 1 and Tier 2 cities names.
+    - locations.txt: Contains names of all Tier 1 and Tier 2 cities.
 
-    - zomatopy.py: Contains all Zomato api function to fetch restaurants data.
+    - zomatopy.py: Contains all Zomato api functions to fetch restaurants data.
 
 - **data/nlu.md** contains training examples for the NLU model  
 - **data/stories.md** contains training stories for the Core model  
